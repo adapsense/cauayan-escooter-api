@@ -8,7 +8,7 @@ Backend for Cauayan City eScooter web and mobile apps.
 4. Storage instance (In-house or Cloud). Recommended Amazon S3 or DigitalOcean Spaces.
 
 ## Installation
-1. Clone repository from [here](https://github.com/adapsense/cauayan-escooter-api.git).
+1. Clone this repository.
 2. Rename [.sample-env](./sample-env) to .env and fill in variables based on your server setup.
 3. Run `npm install` inside the project folder.
 4. Run  `npm start` inside the project folder.
