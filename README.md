@@ -2,13 +2,32 @@
 Backend for Cauayan City eScooter web and mobile apps.
 
 ## Setup Requirements
-1. Server instance (In-house or Cloud). Recommended Linux.
-2. Node.js from [here](https://nodejs.org/en/download/). Recommended LTS version.
-3. MongoDB database instance. See [reference](https://docs.mongodb.com/manual/installation/).
+1. Prepare your server instance (In-house or Cloud). Recommended is Linux with 8GB RAM and 512GB HDD for every 1,000 devices.
+
+2. Intall Node.js from [here](https://nodejs.org/en/download/). Recommended LTS version. Choose the appropriate installer for your operating system.
+<img src="./screenshots/01.png" width="400" height="300" >
+
+3. Install MongoDB Community Edition from [here](https://docs.mongodb.com/manual/installation/). Choose the appropriate installer for your operating system.
+<img src="./screenshots/02.png" width="400" height="300" >
+
 4. Storage instance (In-house or Cloud). Recommended Amazon S3 or DigitalOcean Spaces.
 
 ## Installation
 1. Clone this repository.
-2. Rename [.sample-env](./sample-env) to .env and fill in variables based on your server setup.
-3. Run `npm install` inside the project folder.
-4. Run  `npm start` inside the project folder.
+```git clone https://github.com/adapsense/cauayan-escooter-api.git```
+
+2. Enter the project folder.
+```cd cauayan-escooter-api```
+
+3. Duplicate [.sample-env](./sample-env) to and rename the copied file as `.env`.
+```cp .sample-env .env```
+<img src="./screenshots/03.png" width="400" height="250" >
+
+4. Fill in variables based on your server setup.
+```nano .env```
+
+5. Install the dependencies.
+```npm install```
+
+6. Run the api.
+```npm start```
