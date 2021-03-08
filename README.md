@@ -42,7 +42,7 @@ cp .sample-env .env
 ```
 <img src="./screenshots/07.png" width="400" height="250" >
 
-4. Fill in variables based on your server setup.
+4. If you are running the api locally skip to the next step. Fill in variables based on your server setup. 
 ```
 nano .env
 ```
