@@ -56,3 +56,25 @@ npm install
 ```
 npm start
 ```
+
+## Testing
+1. Open the API documentation from [here](https://documenter.getpostman.com/view/6013653/Tz5m7ejG). Click the `Run in Postman` button at the top right and select `Postman for Web`
+<img src="./screenshots/08.png" width="400" height="200" >
+
+2. Open a new terminal window. Run the following curl command in your terminal to test your API setup.
+```
+curl --location --request PUT 'http://localhost:3001/api/v1/users/signup?isAdmin=true' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user": {
+        "fullName": "Admin",
+        "email": "admin@email.com",
+        "password": "Test1234"
+    }
+}'
+```
+
+3. If you are running a live server setup the web app to point to the IP address of your API setup.
+```
+http://<SERVER_IP_ADDRESS>:3001/api/v1/
+```

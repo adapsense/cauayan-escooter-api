@@ -1,5 +1,5 @@
 ENV=dev
-PORT=3000
+PORT=3001
 BASE_URL_V1=/api/v1
 DB_SECRET=secret
 DB_URL=mongodb://localhost:27017/escooter
