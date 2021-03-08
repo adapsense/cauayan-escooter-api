@@ -98,3 +98,9 @@ curl --location --request PUT 'http://localhost:3001/api/v1/users/signup?isAdmin
 ```
 http://<SERVER_IP_ADDRESS>:3001/api/v1/
 ```
+
+4. Login through the web app using your newly created the test account.
+```
+email: admin@email.com
+password: Test1234
+```

@@ -73,22 +73,18 @@ const UserSchema = new Schema(
 
 UserSchema.pre("save", function (next) {
     var user = this;
-    if (this.facebookId.length != 0 || this.googleId.length != 0) {
-        next();
-    } else {
-        if (this.isModified("password") || this.isNew) {
-            bcrypt.genSalt(10, function (err, salt) {
-                bcrypt.hash(user.password, salt, function (err, hash) {
-                    if (err) {
-                        return next(err);
-                    }
-                    user.password = hash;
-                    next();
-                });
+    if (this.isModified("password") || this.isNew) {
+        bcrypt.genSalt(10, function (err, salt) {
+            bcrypt.hash(user.password, salt, function (err, hash) {
+                if (err) {
+                    return next(err);
+                }
+                user.password = hash;
+                next();
             });
-        } else {
-            return next();
-        }
+        });
+    } else {
+        return next();
     }
 });
 
