@@ -21,7 +21,7 @@ Backend for Cauayan City eScooter web and mobile apps.
 <img src="./screenshots/05.png" width="450" height="100" >
 <img src="./screenshots/06.png" width="300" height="280" >
 
-5. Storage instance (In-house or Cloud). Recommended Amazon S3 or DigitalOcean Spaces.
+7. Storage instance (In-house or Cloud). Recommended Amazon S3 or DigitalOcean Spaces.
 
 ## Installation
 1. Clone this repository.
