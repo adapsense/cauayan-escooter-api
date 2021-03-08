@@ -180,9 +180,7 @@ exports.addUser = async (req, res) => {
                                 error: userStatusFindErr,
                             });
                         user.userStatus = userStatusFindData._id;
-                        console.log("183");
                         User(user).save((userSaveErr, userSaveData) => {
-                            console.log("userSaveErr " + userSaveErr);
                             if (userSaveErr) {
                                 if (
                                     userSaveErr.errmsg &&
@@ -193,7 +191,6 @@ exports.addUser = async (req, res) => {
                                     userSaveErr =
                                         "A user with this email is already registered.";
                                 }
-                                console.log("195 ");
                                 return res.status(500).json({
                                     success: false,
                                     error: userSaveErr,
@@ -206,7 +203,6 @@ exports.addUser = async (req, res) => {
                                 .populate("userStatus")
                                 .select("-password")
                                 .exec((userFindErr, userFindData) => {
-                                        console.log("208");
                                     if (userFindErr)
                                         return res.status(500).json({
                                             success: false,
