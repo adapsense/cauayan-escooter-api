@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "5efe544d58005622c64c6105"
+  },
+  "description": "",
+  "image": "userGroups/cauayan.png",
+  "label": "cauayan",
+  "name": "Cauayan City",
+  "createdAt": {
+    "$date": "2020-07-02T21:40:29.865Z"
+  },
+  "updatedAt": {
+    "$date": "2020-07-02T21:40:29.865Z"
+  },
+  "__v": 0
+}]

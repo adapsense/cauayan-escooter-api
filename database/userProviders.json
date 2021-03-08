@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "5efb31694bcd7e024b87976f"
+  },
+  "description": "",
+  "name": "Manual",
+  "isSocial": false,
+  "createdAt": {
+    "$date": "2020-06-30T12:34:49.796Z"
+  },
+  "updatedAt": {
+    "$date": "2020-06-30T12:34:49.796Z"
+  },
+  "__v": 0
+}]

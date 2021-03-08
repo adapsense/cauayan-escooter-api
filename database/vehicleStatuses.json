@@ -1,0 +1,86 @@
+[{
+  "_id": {
+    "$oid": "5f51fcdb927eaa7a370ef076"
+  },
+  "description": "Registered but not yet deployed for the service",
+  "name": "New",
+  "isAvailable": false,
+  "isInUse": false,
+  "isInRepair": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2020-09-04T08:37:47.852Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:37:47.852Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f51fd47c2252d7a548b7a7b"
+  },
+  "description": "Deployed and ready for service but not in use",
+  "name": "Available",
+  "isAvailable": true,
+  "isInUse": false,
+  "isInRepair": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2020-09-04T08:39:35.420Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:39:35.420Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f51fd5dc2252d7a548b7a7c"
+  },
+  "description": "Currently being used by a rider",
+  "name": "In Use",
+  "isAvailable": true,
+  "isInUse": true,
+  "isInRepair": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2020-09-04T08:39:57.372Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:39:57.372Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f51fd6ec2252d7a548b7a7d"
+  },
+  "description": "Removed from deployment for repairs and other issues",
+  "name": "Repair",
+  "isAvailable": false,
+  "isInUse": false,
+  "isInRepair": true,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2020-09-04T08:40:14.759Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:40:14.759Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f51fd84c2252d7a548b7a7e"
+  },
+  "description": "Permanently removed from deployment. When vehicles are removed from the system, record should not be deleted but changed to this status.",
+  "name": "Disposed",
+  "isAvailable": false,
+  "isInUse": false,
+  "isInRepair": false,
+  "isDeleted": true,
+  "createdAt": {
+    "$date": "2020-09-04T08:40:36.613Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:40:36.613Z"
+  },
+  "__v": 0
+}]

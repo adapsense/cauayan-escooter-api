@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "5f51fc2f064ad07a1e33f6af"
+  },
+  "description": "Currently available for use",
+  "name": "Active",
+  "isActive": true,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2020-09-04T08:34:55.463Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:34:55.463Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f51fc65927eaa7a370ef074"
+  },
+  "description": "When accounts are deleted, account record should not be deleted but changed to this status",
+  "name": "Deleted",
+  "isActive": false,
+  "isDeleted": true,
+  "createdAt": {
+    "$date": "2020-09-04T08:35:49.818Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:35:49.818Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f51fc7a927eaa7a370ef075"
+  },
+  "description": "Not yet deleted but rendered unusable",
+  "name": "Inactive",
+  "isActive": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2020-09-04T08:36:10.515Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-04T08:36:10.515Z"
+  },
+  "__v": 0
+}]

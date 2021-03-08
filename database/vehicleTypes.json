@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "5f4cabed79fde561d4a3065c"
+  },
+  "description": "",
+  "name": "Scooter",
+  "createdAt": {
+    "$date": "2020-08-31T07:51:09.886Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T07:51:09.886Z"
+  },
+  "__v": 0
+}]

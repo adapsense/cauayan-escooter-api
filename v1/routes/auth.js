@@ -13,8 +13,10 @@ module.exports = function(req, res, next) {
             console.log(ex);
         }
     }
+    console.log("url " + url);
 
     if (
+        url.includes("userGroups") ||
         url.includes("users/search") ||
         url.includes("users/signin") ||
         url.includes("users/signup") ||

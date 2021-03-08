@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "5f26a74a7f1cd82b2c6327ea"
+  },
+  "description": "",
+  "name": "Admin",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": "2020-08-02T11:45:14.588Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-02T11:45:14.588Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f26a7527f1cd82b2c6327eb"
+  },
+  "description": "",
+  "name": "Rider",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2020-08-02T11:45:22.008Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-02T11:45:22.008Z"
+  },
+  "__v": 0
+}]
