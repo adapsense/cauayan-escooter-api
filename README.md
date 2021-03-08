@@ -14,7 +14,9 @@ Backend for Cauayan City eScooter web and mobile apps.
 <img src="./screenshots/03.png" width="400" height="200" >
 
 5. Open MongoDB Compass. To check if you have MongoDB correctly setup and running, enter the following connection string inside MongoDB Compass.
-```mongodb://localhost:27017```
+```
+mongodb://localhost:27017
+```
 <img src="./screenshots/04.png" width="400" height="200" >
 
 6. Create a database named `escooter` and a collection named `users`.
@@ -25,20 +27,32 @@ Backend for Cauayan City eScooter web and mobile apps.
 
 ## Installation
 1. Clone this repository.
-```git clone https://github.com/adapsense/cauayan-escooter-api.git```
+```
+git clone https://github.com/adapsense/cauayan-escooter-api.git
+```
 
 2. Enter the project folder.
-```cd cauayan-escooter-api```
+```
+cd cauayan-escooter-api
+```
 
 3. Duplicate [.sample-env](./sample-env) to and rename the copied file as `.env`.
-```cp .sample-env .env```
+```
+cp .sample-env .env
+```
 <img src="./screenshots/07.png" width="400" height="250" >
 
 4. Fill in variables based on your server setup.
-```nano .env```
+```
+nano .env
+```
 
 5. Install the dependencies.
-```npm install```
+```
+npm install
+```
 
 6. Run the api.
-```npm start```
+```
+npm start
+```
