@@ -72,11 +72,9 @@ exports.searchUser = async (req, res) => {
 };
 
 exports.getUser = async (req, res) => {
-    var facebookSignin = false;
     var user;
 
     if (req.user) {
-        facebookSignin = true;
         user = req.user;
     } else {
         user = req.body.user;
@@ -113,45 +111,28 @@ exports.getUser = async (req, res) => {
                     error: "Authentication failed. User not found.",
                 });
             } else {
-                if (!facebookSignin) {
-                    data.comparePassword(user.password, function (
-                        err,
-                        isMatch
-                    ) {
-                        if (isMatch && !err) {
-                            var token = jwt.sign(data.toJSON(), config.secret);
-                            if (isAdmin || !isMobile) {
-                                return res.status(200).json({
-                                    success: true,
-                                    user: data,
-                                    token: token,
-                                });
-                            } else {
-                                updateVehicle(data, token, vehicle, res);
-                            }
-                        } else {
-                            return res.status(401).send({
-                                success: false,
-                                error: "Authentication failed. Wrong password.",
-                            });
-                        }
-                    });
-                } else if (
-                    user.facebookId.length != 0 ||
-                    user.googleId.length != 0
+                data.comparePassword(user.password, function (
+                    err,
+                    isMatch
                 ) {
-                    /*var token = jwt.sign(user.toJSON(), config.secret);
-                    res.redirect("http://localhost:3000/login?token=" + token);
-                    return res.status(200).json({
-                        success: true,
-                        data: { user: user, token: token }
-                    });*/
-                } else {
-                    return res.status(401).send({
-                        success: false,
-                        error: "Authentication failed.",
-                    });
-                }
+                    if (isMatch && !err) {
+                        var token = jwt.sign(data.toJSON(), config.secret);
+                        if (isAdmin || !isMobile) {
+                            return res.status(200).json({
+                                success: true,
+                                user: data,
+                                token: token,
+                            });
+                        } else {
+                            updateVehicle(data, token, vehicle, res);
+                        }
+                    } else {
+                        return res.status(401).send({
+                            success: false,
+                            error: "Authentication failed. Wrong password.",
+                        });
+                    }
+                });
             }
         });
 };

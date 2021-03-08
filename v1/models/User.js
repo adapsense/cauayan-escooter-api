@@ -52,8 +52,6 @@ const UserSchema = new Schema(
             required: true,
             ref: "UserStatus",
         },
-        facebookId: { type: String, default: "" },
-        googleId: { type: String, default: "" },
         email: {
             type: String,
             unique: true,

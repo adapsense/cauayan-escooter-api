@@ -4,9 +4,6 @@ var JwtStrategy = require("passport-jwt").Strategy,
 var User = require("../v1/models/User");
 var config = require("../config/database");
 
-var FacebookStrategy = require("passport-facebook").Strategy;
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
-
 module.exports = function(passport) {
     passport.serializeUser(function(user, done) {
         done(null, user);
@@ -36,34 +33,6 @@ module.exports = function(passport) {
         })
     );
 
-    passport.use(
-        new FacebookStrategy(
-            {
-                clientID: process.env.FACEBOOK_CLIENT_ID,
-                clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-                callbackURL: process.env.FACEBOOK_CALLBACK_URL,
-                profileFields: ["id", "emails", "name", "photos"]
-            },
-            function(token, refreshToken, profile, done) {
-                process.nextTick(function() {
-                    signin(profile, done);
-                });
-            }
-        )
-    );
-
-    passport.use(
-        new GoogleStrategy(
-            {
-                clientID: process.env.GOOGLE_CLIENT_ID,
-                clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-                callbackURL: process.env.GOOGLE_CALLBACK_URL
-            },
-            (token, refreshToken, profile, done) => {
-                signin(profile, done);
-            }
-        )
-    );
 };
 
 function signin(profile, done) {
@@ -80,12 +49,6 @@ function signin(profile, done) {
                 image: profile.photos[0].value
             };
 
-            if (profile.provider == "facebook") {
-                user.facebookId = profile.id;
-            } else {
-                user.googleId = profile.id;
-            }
-
             User(user).save((userSaveErr, userSaveData) => {
                 if (userSaveErr) return done(null, null);
                 User.findById(userSaveData._id)
@@ -99,15 +62,6 @@ function signin(profile, done) {
             });
         } else {
             let id = {};
-            if (profile.provider == "facebook") {
-                id = {
-                    facebookId: profile.id
-                };
-            } else {
-                id = {
-                    googleId: profile.id
-                };
-            }
 
             User.findByIdAndUpdate(
                 userFindOneData._id,
